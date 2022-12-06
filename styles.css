@@ -42,10 +42,13 @@ table {
 	border-spacing: 0;
 }
 
-div #container{
+#container{
     display: flex;
 }
 
-div{
+.grids{
+    width: 1em;
+    height: 1em;
+    border: 1px solid black;
 
 }
