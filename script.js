@@ -5,7 +5,8 @@ function createGrid(){
 
         startingDiv = document.createElement('div');
         container.appendChild(startingDiv);
-        
+        startingDiv.classList.add('grids');
+
     }
 
 }
