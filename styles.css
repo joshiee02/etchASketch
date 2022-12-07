@@ -47,8 +47,12 @@ table {
 }
 
 .grids{
-    width: 1em;
-    height: 1em;
+    width: 3em;
+    height: 3em;
     border: 1px solid black;
 
+}
+
+.color{
+	background-color: red;
 }
