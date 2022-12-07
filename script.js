@@ -1,22 +1,29 @@
 const container = document.querySelector('#container');
 
+let gridsNum;
 let grids = [];
 
 function createGrid(){
 
-    for(let i = 0; i < 16; i++){
+    gridsNum = (+prompt(`How many number of squares per side?`) * 2);
+
+    for(let i = 0; i < gridsNum; i++){
 
         let grid = document.createElement('div');
         container.appendChild(grid);
         grid.classList.add('grids');
         grids.push(grid);
     }
-}
-createGrid();
+    
+    for( let grid of grids){
 
-for( let grid of grids){
-
-    grid.addEventListener('mouseover', () => {
-        grid.classList.add('color');
-    });
+        grid.addEventListener('mouseover', () => {
+            grid.classList.add('color');
+        });
+    }
 }
+
+
+
+const gridsNumBtn = document.querySelector('button');
+gridsNumBtn.onclick = createGrid;
