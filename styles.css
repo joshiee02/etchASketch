@@ -42,11 +42,29 @@ table {
 	border-spacing: 0;
 }
 
+*{
+	background-color: #FFE8D6;
+}
+.header{
+	text-align: center;
+	padding-top: 48px;
+	font-size: 32px;
+}
+.etch{
+	margin-top: 8px;
+}
 #container{
+	border-top: 4px solid #CB997E;
+	border-right: 4px solid #DDBEA9;
+	border-bottom: 4px solid #B7B7A4;
+	border-left: 4px solid #6B705C;
     display: flex;
 	flex-wrap: wrap;
 	align-content: flex-start;
-	height: 90vh;
+	height: 700px;
+	width: 600px;
+	margin: auto;
+	border-radius: 8px;
 }
 
 .grids{
