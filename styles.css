@@ -43,7 +43,7 @@ table {
 }
 
 *{
-	background-color: #FFE8D6;
+	background-color: white;
 }
 .header{
 	text-align: center;
@@ -58,20 +58,19 @@ table {
 	border-right: 4px solid #DDBEA9;
 	border-bottom: 4px solid #B7B7A4;
 	border-left: 4px solid #6B705C;
-    display: flex;
-	flex-wrap: wrap;
+	
+	display: flex;
+	flex-flow: row wrap;
 	align-content: flex-start;
-	height: 700px;
-	width: 600px;
 	margin: auto;
+	width: 760px;
+	height: 760px;
 	border-radius: 8px;
+	background-color: #E8E4DB;
 }
 
 .grids{
-    width: 3em;
-    height: 3em;
-    border: 1px solid black;
-
+	border: 1px solid black;
 }
 
 .color{
