@@ -1,27 +1,25 @@
 const container = document.querySelector('#container');
 
-let gridsNum;
+//let gridsNum;
 let grids = [];
 
 function createGrid(){
 
-    gridsNum = (+prompt('how many set of grids do you want?'));
-
-    if(gridsNum > 100) {
-        gridsNum = 100;
-    }else{
-        gridsNum *= gridsNum;
-    }
+    let gridsNum = (+prompt('how many set of grids do you want?'));
+    if(gridsNum > 100) gridsNum = 100;
     
-
-    for(let i = 0; i < gridsNum; i++){
+    let gridSize = gridsNum;
+    let calcGridSize = (760 - gridSize * 2) / gridSize;
+   
+    for(let i = 0; i < Math.pow(gridsNum, 2); i++){
 
         let grid = document.createElement('div');
         container.appendChild(grid);
         grid.classList.add('grids');
-         grids.push(grid);
+        grid.style.cssText = `width: ${calcGridSize}px; height: ${calcGridSize}px`;
+        grids.push(grid);
      }
-        
+    
     for( let grid of grids){
 
         grid.addEventListener('mouseover', () => {
