@@ -5,25 +5,41 @@ let grids = [];
 
 function createGrid(){
 
-    gridsNum = (+prompt(`How many number of squares per side?`) * 2);
+    gridsNum = (+prompt('how many set of grids do you want?'));
+
+    if(gridsNum > 100) {
+        gridsNum = 100;
+    }else{
+        gridsNum *= gridsNum;
+    }
+    
 
     for(let i = 0; i < gridsNum; i++){
 
         let grid = document.createElement('div');
         container.appendChild(grid);
         grid.classList.add('grids');
-        grids.push(grid);
-    }
-    
+         grids.push(grid);
+     }
+        
     for( let grid of grids){
 
         grid.addEventListener('mouseover', () => {
-            grid.classList.add('color');
-        });
+        grid.classList.add('color');
+            });
+        }
     }
-}
-
 
 
 const gridsNumBtn = document.querySelector('button');
-gridsNumBtn.onclick = createGrid;
+
+gridsNumBtn.addEventListener('click', () =>{
+    
+    const gridsHTML = document.querySelectorAll('.grids');
+
+  // Iterate over the elements and remove them from the page
+    gridsHTML.forEach(element => element.remove());
+     
+    createGrid();
+    
+});
