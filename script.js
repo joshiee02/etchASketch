@@ -19,7 +19,7 @@ function createGrid(){
     if(gridsNum > 100) gridsNum = 100;
 
     let gridSize = gridsNum;
-    let calcGridSize = (760 - gridSize * 2) / gridSize;
+    let calcGridSize = (600 - gridSize * 2) / gridSize;
    
     for(let i = 0; i < Math.pow(gridsNum, 2); i++){
 
