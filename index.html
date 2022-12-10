@@ -8,7 +8,19 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <button>Grids</button>
+    <div class="header">
+        <div>This is,</div>
+        <div class="etch">Etch-a-Sketch!</div>
+    </div>
+    <div class="settings">
+        <div class="rangeSettings">
+            <input type="range" id="gridsNum" min="2" max="100" value="2" step=2">
+            <button class="rangeBtn">Apply</button>
+        </div>
+        <div class="colorSettings">
+            <input type="color" id="color" value="#00000">
+        </div>
+    </div>
     <div id="container"></div>
 
 
